@@ -2,7 +2,7 @@
 @import "vars";
 @import "libs";
 @import "fonts";
-
+@import "slider";
 
 
 .header {
@@ -256,7 +256,7 @@
     }
   }
 
-  & .slider-wrapper {
+  & .slider-custom {
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
