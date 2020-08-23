@@ -1,13 +1,45 @@
 @import "global";
+@import "fonts";
 @import "vars";
 @import "libs";
-@import "fonts";
 @import "slider";
+
+@font-face {
+  font-family: 'Montserrat-Light', sans-serif;
+  src: url("../fonts/Montserrat-Light.ttf") format('ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+$light: 'Montserrat-Light', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-Regular', sans-serif;
+  src: url("../fonts/Montserrat-Regular.woff");
+}
+$regular: 'Montserrat-Regular', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-Medium', sans-serif;
+  src: url("../fonts/Montserrat-Medium.woff");
+}
+$medium: 'Montserrat-Medium', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  src: url("../fonts/Montserrat-SemiBold.woff");
+}
+$semiBold: 'Montserrat-SemiBold', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-Bold', sans-serif;
+  src: url("../fonts/Montserrat-Bold.woff")
+  format('woff');
+}
+$bold: 'Montserrat-Bold', sans-serif;
 
 
 .header {
   background: $purple;
-  font-family: $Inter;
 
   & .navbar {
     padding: 0;
@@ -15,6 +47,7 @@
       & .nav-item {
         padding: 41px 0;
         & .nav-link {
+          font-family: 'Montserrat-Light', sans-serif;
           cursor: pointer;
           font-size: 16px;
           position: relative;
@@ -137,7 +170,6 @@
   padding-bottom: 93px;
   padding-top: 74px;
 
-
   &-subtitle {
     font-size: 65px;
     font-weight: 300;
@@ -145,6 +177,7 @@
     line-height: 79px;
   }
   &-title {
+    font-family: 'Montserrat-Light', sans-serif;
     font-weight: 600;
     font-size: 91px;
     line-height: 111px;
@@ -233,6 +266,7 @@
         background-color: transparent;
         color: $t-purple;
         width: 250px;
+        transition: .3s background-color ease-in-out;
 
         &:hover {
           border: 1px solid $bg-purple;
@@ -249,6 +283,8 @@
       background-color: transparent;
       color: $t-orange;
       width: 250px;
+      transition: .3s background-color ease-in-out;
+
 
       &:hover {
         border: 1px solid $orange;
@@ -259,6 +295,10 @@
   }
   .carousel-control-prev, .carousel-control-next {
     top: 60px;
+    right:  -100px;
+  }
+  .carousel-control-next-icon {
+    background: transparent;
   }
   & .slider-custom {
     display: flex;
@@ -270,6 +310,7 @@
       z-index: 1;
       border: none;
       padding-top: 40px;
+      padding-bottom: 23px;
       &:nth-child(2)::after {
         position: absolute;
         content: "";
@@ -490,7 +531,7 @@
 
 //section 5
 .choose {
-  padding-bottom: 90px;
+  margin-bottom: 90px;
   & .section-title{
     width: 25%;
     margin: 0 auto;
@@ -531,6 +572,7 @@
     display: flex;
     justify-content: space-between;
     .card {
+      height: 350px;
       width: 27%;
       border: none;
       margin: 0 20px;
@@ -545,6 +587,8 @@
       &-body {
         padding: 0;
         &-button {
+          width: 296px;
+          height: 75px;
           font-weight: 600;
           font-size: 22px;
           line-height: 27px;
@@ -553,12 +597,11 @@
           background-color: $bg-orange;
           outline: none;
           border: none;
-          width: 100%;
           color: $t-white;
           margin-bottom: 28px;
         }
         & img {
-          width: 100%;
+          width: 296px;
           margin-bottom: 21px;
         }
         &-text {
