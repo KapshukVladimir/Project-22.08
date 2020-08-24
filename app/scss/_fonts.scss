@@ -1,33 +1,31 @@
-//MONTSERRAT
 @font-face {
-  font-family: "Montserrat-Light";
-  src: url("../fonts/Montserrat-Light.woff") format('woff');
+  font-family: 'Montserrat-Light', sans-serif;
+  src: url("../fonts/Montserrat-Light.ttf")
+  format('ttf');
 }
-@font-face {
-  font-family: "Montserrat-Regular";
-  src: url("../fonts/Montserrat-Regular.woff") format('woff');
-}
-@font-face {
-  font-family: "Montserrat-Medium";
-  src: url("../fonts/Montserrat-Medium.woff") format('woff');
-}
-@font-face {
-  font-family: "Montserrat-SemiBold";
-  src: url("../fonts/Montserrat-SemiBold.woff") format('woff');
-}
-@font-face {
-  font-family: "Montserrat-Bold";
-  src: url("../fonts/Montserrat-Bold.woff") format('woff');
-}
-$m-light: 'Montserrat-Light';
-$m-regular: 'Montserrat-Regular';
-$m-medium: 'Montserrat-Medium';
-$m-semi-bold: 'Montserrat-SemiBold';
-$m-bold: 'Montserrat-Bold';
+$light: 'Montserrat-Light', sans-serif;
 
-//ROBOTO
 @font-face {
-  font-family: "Roboto-Regular";
-  src: url("../fonts/Roboto-Regular.ttf") format('truetype');
+  font-family: 'Montserrat-Regular', sans-serif;
+  src: url("../fonts/Montserrat-Regular.woff");
 }
-$r-regular: 'Roboto-Regular';
+$regular: 'Montserrat-Regular', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-Medium', sans-serif;
+  src: url("../fonts/Montserrat-Medium.woff");
+}
+$medium: 'Montserrat-Medium', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  src: url("../fonts/Montserrat-SemiBold.woff");
+}
+$semiBold: 'Montserrat-SemiBold', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-Bold', sans-serif;
+  src: url("../fonts/Montserrat-Bold.woff");
+}
+$bold: 'Montserrat-Bold', sans-serif;
+
