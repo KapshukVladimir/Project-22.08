@@ -1,6 +1,4 @@
 @import "fonts";
-@import "vars";
-
 h1 {
   margin: 0;
 }
@@ -11,26 +9,6 @@ ul {
 }
 p {
   margin-bottom: 0;
-}
-
-.sections-title {
-  &.image-text {
-    background: #e5e5e5;
-    padding-bottom: 59px;
-
-    & .block-logo {
-      margin-bottom: 59px;
-      padding-top: 77px;
-
-      & .block-logo-text {
-        color: $t-purple;
-        font-size: 42px;
-        line-height: 51px;
-        font-family: $m-semi-bold;
-        margin-left: 46px;
-      }
-    }
-  }
 }
 .section  {
   padding: 60px 0 61px 0;
