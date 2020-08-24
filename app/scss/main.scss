@@ -3,64 +3,92 @@
 @import "vars";
 @import "libs";
 @import "slider";
-@import "modal";
+
+@font-face {
+  font-family: 'Montserrat-Light', sans-serif;
+  src: url("../fonts/Montserrat-Light.ttf") format('ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+$light: 'Montserrat-Light', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-Regular', sans-serif;
+  src: url("../fonts/Montserrat-Regular.woff");
+}
+$regular: 'Montserrat-Regular', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-Medium', sans-serif;
+  src: url("../fonts/Montserrat-Medium.woff");
+}
+$medium: 'Montserrat-Medium', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  src: url("../fonts/Montserrat-SemiBold.woff");
+}
+$semiBold: 'Montserrat-SemiBold', sans-serif;
+
+@font-face {
+  font-family: 'Montserrat-Bold', sans-serif;
+  src: url("../fonts/Montserrat-Bold.woff")
+  format('woff');
+}
+$bold: 'Montserrat-Bold', sans-serif;
+
+
 .header {
   background: $purple;
+
   & .navbar {
     padding: 0;
     & .navbar-nav {
       & .nav-item {
-        margin-right: 20px;
         padding: 41px 0;
-        &:last-child{
-          margin-right: 0;
-        }
-        &.active{
-          & .nav-link{
-          color: $t-orange;
-          border-color: $orange;
-          }
-        }
         & .nav-link {
-          padding: 0;
-          font-family: $m-medium, sans-serif;
+          font-family: 'Montserrat-Light', sans-serif;
           cursor: pointer;
           font-size: 16px;
           position: relative;
           color: $t-white;
           line-height: 20px;
-          border-bottom: 1px solid transparent;
-          transition: all .1s linear;
-         &:hover{
-           border-color: $orange;
-           color: $t-orange;
-           transition: all .1s linear;
-         }
+
+          &::after
+          {
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 0;
+            height: 2px;
+            content: '';
+            transition: width .2s ease-in-out;
+            background-color: $orange;
+          }
+          &:hover::after
+          {
+            width: 100%;
+          }
         }
       }
     }
   }
   & .info {
     & .connect {
-      & * {
-        margin-bottom: 8px;
-      }
       & h4 {
         font-size: 14px;
         color: $t-white;
-        font-family: $m-regular, sans-serif;
+        font-weight: 300;
       }
       & a {
         font-size: 16px;
         color: $t-orange;
         text-decoration: none;
-        font-family: $r-regular, sans-serif;
       }
       & p {
         font-size: 12px;
         color: $t-white;
         margin: 0;
-        font-family: $m-regular, sans-serif;
       }
     }
     & .line {
@@ -78,7 +106,6 @@
         font-size: 16px;
         text-decoration: none;
         color: $t-white;
-        font-family: $m-medium, sans-serif;
       }
     }
   }
@@ -100,24 +127,14 @@
 
       & .item {
         margin-right: 38px;
+
         & a {
           font-size: 14px;
           color: $t-purple;
           margin-left: 9px;
           text-decoration: none;
-          font-family: $m-light, sans-serif;
-          border-bottom: 1px solid transparent;
-          transition: all .1s linear;
           &:hover {
-            transition: all .1s linear;
-            border-color: $t-orange;
-            color: $t-orange;
-          }
-        }
-        &.active{
-          & a{
-            color: $t-orange;
-            border-color: $orange;
+            border-bottom: 1px solid $t-orange;
           }
         }
         &:last-child {
@@ -134,7 +151,7 @@
       color: $t-white;
       border: none;
       outline: none;
-      font-family: $m-regular, sans-serif;
+      font-weight: 300;
     }
     & .cabinet-btn {
       background-color: $bg-purple;
@@ -149,19 +166,20 @@
 
 //section 2
 .banner {
-  background: url('../img/bg-banner.jpg') no-repeat center;
   background-size: cover;
+  background: url('../img/bg-banner.jpg') no-repeat center;
   padding-bottom: 93px;
   padding-top: 74px;
 
   &-subtitle {
     font-size: 65px;
+    font-weight: 300;
     color: $t-white;
     line-height: 79px;
-    font-family: $m-regular, sans-serif;
   }
   &-title {
-    font-family: $m-semi-bold, sans-serif;
+    font-family: 'Montserrat-Light', sans-serif;
+    font-weight: 600;
     font-size: 91px;
     line-height: 111px;
     color: $t-white;
@@ -169,7 +187,8 @@
     margin-bottom: 37px;
   }
   & h3 {
-    font-family: $m-regular, sans-serif;
+    font-style: normal;
+    font-weight: 300;
     font-size: 25px;
     line-height: 30px;
     color: $t-white;
@@ -178,7 +197,8 @@
   }
   &-btn {
     & button {
-      font-family: $m-medium, sans-serif;
+      font-style: normal;
+      font-weight: 500;
       font-size: 33px;
       line-height: 40px;
       background: $bg-orange;
@@ -195,38 +215,60 @@
 .tariff {
   background-color: #f8f8f8;
   & .section-title{
+    width: 25%;
+    margin: 0 auto;
     & .block-title {
-      padding: 0 34px;
-      color: $t-purple;
+      padding: 60px 0 61px 0;
+      position: relative;
+      text-align: center;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 43px;
+      letter-spacing: 0.03em;
+      color: $t-purple;;
+      z-index: 1;
       &::before {
+        position: absolute;
         background: url("../img/title-line.png");
+        content: '';
+        top: 50%;
+        left: -150%;
+        width: 150%;
+        height: 2px;;
+        display: block;
       }
       &::after {
+        position: absolute;
         background: url("../img/title-line.png");
+        content: '';
+        top: 50%;
+        right: -150%;
+        width: 150%;
+        height: 2px;
+        display: block;
       }
+
     }
   }
 
   & .block-buttons {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 39px;
-    & button{
-      font-family: $m-regular, sans-serif;
-      font-size: 22px;
-      line-height: 27px;
-      outline: none;
-      border: 1px solid transparent;
-      background-color: transparent;
-      width: 250px;
-      transition: .3s background-color ease-in-out;
-    }
+
     & button:first-child {
         padding: 17px 70px 16px 68px;
         font-style: normal;
         font-weight: 500;
-        border-color: $purple;
+        font-size: 22px;
+        line-height: 27px;
+        outline: none;
+        border: 1px solid $t-purple;
+        background-color: transparent;
         color: $t-purple;
+        width: 250px;
+        transition: .3s background-color ease-in-out;
+
         &:hover {
           border: 1px solid $bg-purple;
           background-color: $bg-purple;
@@ -235,8 +277,16 @@
     }
     & button:last-child {
       padding: 17px 42px 16px 42px;
-      border-color: $orange;
+      font-size: 22px;
+      line-height: 27px;
+      outline: none;
+      border: 1px solid $orange;
+      background-color: transparent;
       color: $t-orange;
+      width: 250px;
+      transition: .3s background-color ease-in-out;
+
+
       &:hover {
         border: 1px solid $orange;
         background-color: $orange;
@@ -244,11 +294,17 @@
       }
     }
   }
-
+  .carousel-control-prev, .carousel-control-next {
+    top: 60px;
+    right:  -100px;
+  }
+  .carousel-control-next-icon {
+    background: transparent;
+  }
   & .slider-custom {
     display: flex;
-    justify-content: space-between;
-    padding: 30px 0px;
+    justify-content: space-around;
+    padding: 30px 15px;
 
     & .card {
       position: relative;
@@ -256,8 +312,7 @@
       border: none;
       padding-top: 40px;
       padding-bottom: 23px;
-      width: 300px;
-      &.hit::after {
+      &:nth-child(2)::after {
         position: absolute;
         content: "";
         background-image: url("../img/hit.png");
@@ -267,10 +322,16 @@
         top: -20px;
         z-index: 100;
       }
-      &.mr-last{
-        margin-right: 41px;
+      &:nth-child(3)::after {
+        position: absolute;
+        content: "";
+        background-image: url("../img/hit.png");
+        width: 73px;
+        height: 73px;
+        right: -30px;
+        top: -20px;
+        z-index: 100;
       }
-
       & .card-title {
         display: flex;
         justify-content: space-around;
@@ -282,7 +343,6 @@
           }
         }
         & h4 {
-          font-family: $m-semi-bold, sans-serif;
           font-size: 30px;
           line-height: 37px;
           font-weight: 600;
@@ -298,7 +358,6 @@
       }
       & .card-body-package {
         & .card-body-title {
-          font-family: $m-medium, sans-serif;
           text-align: center;
           font-style: normal;
           color: $t-purple;
@@ -309,9 +368,8 @@
           margin-bottom: 10px;
         }
         & .card-body-btn {
-          font-family: $m-medium, sans-serif;
           width: 100%;
-          height: 41px;
+          font-weight: 500;
           font-size: 16px;
           line-height: 20px;
           letter-spacing: 0.03em;
@@ -319,7 +377,7 @@
           border: none;
           outline: none;
           color: $t-white;
-          padding: 10px 0 11px 0;
+          padding: 10px 106px;
         }
 
         & ul {
@@ -329,7 +387,6 @@
           flex-direction: column;
           align-items: center;
           & li {
-            font-family: $m-light, sans-serif;
             width: 50%;
             color: $t-purple;
             font-size: 16px;
@@ -351,18 +408,15 @@
           text-align: center;
           color: $t-purple;
           font-size: 47px;
-          font-family: $m-bold, sans-serif;
+          font-weight: bold;
           margin-bottom: 30px;
           & span {
             font-weight: normal;
-            font-size: 32px;
-            font-family: $m-regular, sans-serif;
           }
         }
         & .card-connect-btn {
           text-align: center;
           & button {
-            font-family: $m-medium, sans-serif;
             width: 90%;
             padding: 17px 55px 16px;
             font-size: 22px;
@@ -383,32 +437,45 @@
 //section 4
 .how-connect {
   & .section-title{
+    width: 25%;
+    margin: 0 auto;
     & .block-title {
-      color: $t-purple;
-      padding: 0 35px;
+      margin: 60px 0 61px 0;
+      position: relative;
+      text-align: center;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 43px;
+      letter-spacing: 0.03em;
+      color: $t-purple;;
+      z-index: 1;
       &::before {
+        position: absolute;
         background: url("../img/title-line.png");
+        content: '';
+        top: 50%;
+        left: -150%;
+        width: 150%;
+        height: 2px;;
+        display: block;
       }
       &::after {
+        position: absolute;
         background: url("../img/title-line.png");
+        content: '';
+        top: 50%;
+        right: -150%;
+        width: 150%;
+        height: 2px;
+        display: block;
       }
-    }
-  }
-  & .how-title {
-    & h3{
-      font-family: $m-regular, sans-serif;
-      width: 100%;
-      color: $t-purple;
-      font-size: 26px;
-      line-height: 32px;
-      text-align: center;
-      margin: 0;
     }
   }
 
   & .card-wrapper {
-    margin-top: 40px;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-around;
     & .card {
@@ -416,10 +483,10 @@
       &::after {
         position: absolute;
         content: "";
-        background: url("../img/Arrow 1.svg") no-repeat;
+        background: url("../img/Arrow.jpg") no-repeat;
         width: 40%;
         height: 10px;
-        top: 48%;
+        top: 54%;
         right: -7%;
         display: block;
         z-index: 200;
@@ -433,27 +500,28 @@
         margin-bottom: 45px;
         & h3 {
           color: $t-orange;
+          font-weight: 300;
           font-size: 90px;
-          line-height: 110px;
-          font-family: $m-light, sans-serif;
+          line-height: 110px
         }
         & h4 {
           color: $t-purple;
+          font-weight: 600;
           font-size: 22px;
           line-height: 27px;
           letter-spacing: 0.03em;
-          font-family: $m-semi-bold, sans-serif;
         }
       }
       &-body {
         padding: 0;
         &-text {
+          font-weight: 300;
           font-size: 16px;
-          line-height: 28px;
+          line-height: 20px;
           letter-spacing: 0.03em;
           color: $t-purple;
-          width: 90%;
-          font-family: $m-light, sans-serif;
+          width: 80%;
+
         }
       }
     }
@@ -464,17 +532,40 @@
 
 //section 5
 .choose {
-  background-color: #f8f8f8;
+  margin-bottom: 90px;
   & .section-title{
+    width: 25%;
+    margin: 0 auto;
     & .block-title {
-      padding: 0 33px;
-      color: $t-purple;
+      margin: 60px 0 61px 0;
+      position: relative;
+      text-align: center;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 43px;
+      letter-spacing: 0.03em;
+      color: $t-purple;;
       z-index: 1;
       &::before {
+        position: absolute;
         background: url("../img/title-line.png");
+        content: '';
+        top: 50%;
+        left: -150%;
+        width: 150%;
+        height: 2px;;
+        display: block;
       }
       &::after {
+        position: absolute;
         background: url("../img/title-line.png");
+        content: '';
+        top: 50%;
+        right: -150%;
+        width: 150%;
+        height: 2px;
+        display: block;
       }
     }
   }
@@ -483,10 +574,9 @@
     justify-content: space-between;
     .card {
       height: 350px;
-      width: 300px;
+      width: 27%;
       border: none;
       margin: 0 20px;
-      background-color: transparent;
       &-title {
         margin-bottom: 36px;
         & img {
@@ -498,9 +588,9 @@
       &-body {
         padding: 0;
         &-button {
-          font-family: $m-semi-bold, sans-serif;
           width: 296px;
           height: 75px;
+          font-weight: 600;
           font-size: 22px;
           line-height: 27px;
           letter-spacing: 0.03em;
@@ -516,8 +606,8 @@
           margin-bottom: 21px;
         }
         &-text {
-          font-family: $m-light, sans-serif;
           color: $t-purple;
+          font-weight: 300;
           font-size: 16px;
           line-height: 20px;
           letter-spacing: 0.03em;
@@ -532,17 +622,43 @@
 //section 6
 .form-section {
   background-color: $t-orange;
+  padding: 60px 0 61px 0;
   & .section-title{
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
     & .block-title {
       margin-bottom: 48px ;
       padding: 0 16px;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 43px;
+      line-height: 43px;
+      letter-spacing: 0.03em;
       color: $t-white;
-      font-size: 40px;
+      z-index: 1;
       &::before {
+        position: absolute;
         background: url("../img/Line32.jpg");
+        content: '';
+        top: 50%;
+        left: -150%;
+        width: 150%;
+        height: 2px;;
+        display: block;
       }
       &::after {
+        position: absolute;
         background: url("../img/Line32.jpg");
+        content: '';
+        top: 50%;
+        right: -150%;
+        width: 150%;
+        height: 2px;
+        display: block;
       }
 
     }
@@ -551,10 +667,10 @@
     & h3 {
       width: 100%;
       color: $t-white;
+      font-weight: 300;
       font-size: 26px;
       line-height: 32px;
       text-align: center;
-      font-family: $m-regular, sans-serif;
     }
   }
 
@@ -562,7 +678,6 @@
     margin-top: 63px;
     margin-bottom: 12px;
     & .form-size {
-      font-family: $m-regular, sans-serif;
       width: 321px;
       height: 53px;
       background-color: transparent;
@@ -591,7 +706,7 @@
       border: 1px solid $purple;
       margin-right: 0;
       font-size: 22px;
-      font-family: $m-medium, sans-serif;
+
     }
   }
 }
@@ -601,17 +716,43 @@
 .services {
   background-color: #f8f8f8;
   padding: 62px 0 70px 0;
+
   & .section-title{
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
     & .block-title {
-      margin-bottom: 48px;
+      margin-bottom: 48px ;
       padding: 0 27px;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      font-style: normal;
+      font-weight: 600;
       font-size: 43px;
+      line-height: 43px;
+      letter-spacing: 0.03em;
       color: $t-purple;
+      z-index: 1;
       &::before {
+        position: absolute;
         background: url("../img/Line28.png");
+        content: '';
+        top: 50%;
+        left: -150%;
+        width: 150%;
+        height: 2px;;
+        display: block;
       }
       &::after {
+        position: absolute;
         background: url("../img/Line28.png");
+        content: '';
+        top: 50%;
+        right: -150%;
+        width: 150%;
+        height: 2px;
+        display: block;
       }
     }
   }
@@ -624,7 +765,6 @@
     }
     & p {
       margin-bottom: 0;
-      font-family: $m-light, sans-serif;
     }
   }
   & .description {
@@ -633,7 +773,6 @@
       margin-bottom: 30px;
       line-height: 20px;
       letter-spacing: 0.03em;
-      font-family: $m-light, sans-serif;
 
       &:last-child {
         margin-bottom: 0;
@@ -651,28 +790,33 @@
     margin-bottom: 98px;
     & .footer-connect, & .footer-support, & .footer-emergency, {
       & h5 {
+        font-style: normal;
+        font-weight: 600;
         font-size: 20px;
         line-height: 24px;
         letter-spacing: 0.03em;
         color: $t-white;
         margin-bottom: 10px;
-        font-family: $m-semi-bold, sans-serif;
       }
       & a {
         display: block;
         color: $t-white;
         text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
         font-size: 18px;
         line-height: 22px;
         margin-bottom: 10px;
-        font-family: $m-medium, sans-serif;
+
       }
       & p {
         color: $t-white;
+        font-style: normal;
+        font-weight: 200;
         font-size: 16px;
         line-height: 20px;
         margin-bottom: 10px;
-        font-family: $m-regular, sans-serif;
+
       }
     }
     //&-support {
@@ -744,24 +888,22 @@
     margin-bottom: 90px;
     & .footer-services, .footer-address, .footer-contact {
       & h5 {
+        font-style: normal;
+        font-weight: 600;
         font-size: 20px;
         line-height: 24px;
         letter-spacing: 0.03em;
         color: $t-white;
         margin-bottom: 73px;
-        font-family: $m-semi-bold, sans-serif;
+
       }
       & p {
         color: $t-white;
+        font-style: normal;
+        font-weight: 300;
         font-size: 16px;
         line-height: 20px;
         margin-bottom: 20px;
-        font-family: $m-regular, sans-serif;
-      }
-    }
-    & .footer-address{
-      & h5{
-        margin-bottom: 49px;
       }
     }
   }
@@ -776,10 +918,11 @@
   & .forth {
     p {
       color: $t-white;
+      font-style: normal;
+      font-weight: 200;
       font-size: 15px;
       line-height: 18px;
       margin-bottom: 14px;
-      font-family: $m-regular, sans-serif;
     }
   }
 
