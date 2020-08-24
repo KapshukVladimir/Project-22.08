@@ -5,6 +5,11 @@
 @import "slider";
 @import "modal";
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10000;
   background: $purple;
   & .navbar {
     padding: 0;
