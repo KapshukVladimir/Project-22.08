@@ -110,7 +110,7 @@
                     Тест-драйв на 10 дней
                 </h3>
                 <div class="banner-btn">
-                    <button>Поключить</button>
+                    <button data-toggle="modal" data-target="#exampleModal">Поключить</button>
                 </div>
             </div>
         </div>
@@ -147,7 +147,7 @@
                                 <div class="card-line"></div>
                                 <div class="card-body-package">
                                     <h5 class="card-body-title">Безлиминтный</h5>
-                                    <button class="card-body-btn">10 Мбит/с</button>
+                                    <button class="card-body-btn" >10 Мбит/с</button>
                                     <ul>
                                         <li>
                                             WI-Fi роутер входит в подарок
@@ -163,7 +163,7 @@
                                     </div>
 
                                     <div class="card-connect-btn">
-                                        <button>Подключить</button>
+                                        <button data-toggle="modal" data-target="#exampleModal">Подключить</button>
                                     </div>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@
                                     </div>
 
                                     <div class="card-connect-btn">
-                                        <button>Подключить</button>
+                                        <button data-toggle="modal" data-target="#exampleModal">Подключить</button>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +227,7 @@
                                     </div>
 
                                     <div class="card-connect-btn">
-                                        <button>Подключить</button>
+                                        <button data-toggle="modal" data-target="#exampleModal">Подключить</button>
                                     </div>
                                 </div>
                             </div>
@@ -263,7 +263,7 @@
                                     </div>
 
                                     <div class="card-connect-btn">
-                                        <button>Подключить</button>
+                                        <button data-toggle="modal" data-target="#exampleModal">Подключить</button>
                                     </div>
                                 </div>
                             </div>
@@ -295,7 +295,7 @@
                                     </div>
 
                                     <div class="card-connect-btn">
-                                        <button>Подключить</button>
+                                        <button data-toggle="modal" data-target="#exampleModal">Подключить</button>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +327,7 @@
                                     </div>
 
                                     <div class="card-connect-btn">
-                                        <button>Подключить</button>
+                                        <button data-toggle="modal" data-target="#exampleModal">Подключить</button>
                                     </div>
                                 </div>
                             </div>
@@ -567,8 +567,8 @@
         <form action="" class="form">
             <div class="row">
                 <div class="col-xs-10 m-auto d-flex justify-content-center">
-                    <input class="form-size"  type="text" name="name" placeholder="Имя">
-                    <input class="form-size" type="text" name="name" placeholder="Телефон">
+                    <input required class="form-size"  type="text" name="name" placeholder="Имя">
+                    <input required class="form-size" type="text" name="name" placeholder="Телефон">
                     <button class="form-size">Отправить</button>
                 </div>
             </div>
@@ -678,6 +678,57 @@
         </div>
     </div>
 </footer>
+
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+<!--    Launch demo modal-->
+<!--</button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-form-block">
+                <h3 class="form-title">Подключиться к сети “Мир Антенн”</h3>
+                <div class="form-block">
+                    <img src="img/gift-box%202.svg" alt="">
+                    <h4 class="form-suptitle">Дарим 799 бонусых рублей на все услуги</h4>
+                </div>
+                <form action="" class="modal-form">
+                    <div class="input-wrapper">
+                        <input required type="text" name="name" placeholder="Имя">
+                        <input required type="tel" name="phone" placeholder="Телефон">
+                    </div>
+                    <input required type="text" name="address" placeholder="Адресс">
+                    <button type="submit">Подключиться</button>
+                </form>
+                <p>Мы не передаем Ваши данные третьим лицам</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog success" role="document">
+        <div class="modal-content">
+            <div class="modal-form-block">
+                <h3 class="form-title">Спасибо!</h3>
+                <h4 class="form-suptitle">Наш менеджер перезвонит Вам в ближайшее время</h4>
+                <button type="button" data-dismiss="modal">ОК</button>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            </button>
+        </div>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/main.js"></script>
