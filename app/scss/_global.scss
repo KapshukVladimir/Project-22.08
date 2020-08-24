@@ -1,3 +1,7 @@
+@import "fonts";
+* {
+  border: 1px solid red;
+}
 h1 {
   margin: 0;
 }
@@ -8,4 +12,41 @@ ul {
 }
 p {
   margin-bottom: 0;
+}
+.section  {
+  padding: 60px 0 61px 0;
+  & .section-title{
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    & .block-title {
+      margin-bottom: 61px;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      font-family: $m-semi-bold, sans-serif;
+      font-size: 35px;
+      line-height: 43px;
+      letter-spacing: 0.03em;
+      z-index: 1;
+      &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: -150%;
+        width: 150%;
+        height: 2px;
+        display: block;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: -150%;
+        width: 150%;
+        height: 2px;
+        display: block;
+      }
+    }
+  }
 }
