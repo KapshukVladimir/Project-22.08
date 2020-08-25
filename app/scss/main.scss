@@ -105,13 +105,17 @@
         margin-bottom: 0;
         padding: 0;
         & .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 10px;
           &:last-child{
-            margin-right: 34px;
+            margin-right: 0;
           }
           & a {
+            margin-left: 5px;
             font-size: 14px;
             color: $t-purple;
-            margin-left: 9px;
             text-decoration: none;
             font-family: $m-light, sans-serif;
             border-bottom: 1px solid transparent;
@@ -249,11 +253,13 @@
         }
       }
     }
-
+    .none2 {
+      display: none;
+    }
     & .slider-custom {
       display: flex;
       justify-content: space-between;
-      padding: 30px 0px;
+      padding: 30px 0;
 
       & .card {
         position: relative;
