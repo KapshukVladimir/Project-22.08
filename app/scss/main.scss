@@ -103,9 +103,11 @@
     & .second-menu {
       & .menu {
         margin-bottom: 0;
-        padding: 0 15px 0 0;
+        padding: 0;
         & .item {
-          margin-right: 40px;
+          &:last-child{
+            margin-right: 34px;
+          }
           & a {
             font-size: 14px;
             color: $t-purple;
@@ -125,9 +127,6 @@
               color: $t-orange;
               border-color: $orange;
             }
-          }
-          &:last-child {
-            margin-right: 0;
           }
         }
       }

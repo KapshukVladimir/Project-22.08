@@ -68,7 +68,7 @@
                 <div class="logo col-xl-3 col-lg-3 col-md-3 p-0 d-flex">
                     <img src="img/logo.svg" alt="logo">
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 pl-0 m-auto ">
+                <div class="col-xl-6 col-lg-6 col-md-6 p-0 m-auto ">
                 <nav class="second-menu">
                     <ul class="menu d-flex justify-content-between">
                         <li class="item active">
@@ -696,14 +696,15 @@
                     <img src="img/gift-box%202.svg" alt="">
                     <h4 class="form-suptitle">Дарим 799 бонусых рублей на все услуги</h4>
                 </div>
-                <form action="" class="modal-form">
+                <form id="formMail" class="modal-form">
                     <div class="input-wrapper">
-                        <input required type="text" name="name" placeholder="Имя">
-                        <input required type="tel" name="phone" placeholder="Телефон">
+                        <input class="form-control" id="name" type="text" name="name" placeholder="Имя">
+                        <input class="form-control" id="phone" type="phone" name="phone" placeholder="Телефон">
                     </div>
-                    <input required type="text" name="address" placeholder="Адресс">
-                    <button type="submit">Подключиться</button>
+                    <input class="form-control" id="address" type="text" name="address" placeholder="Адресс">
+                    <button id="sendMail" type="button" data-toggle="modal" data-target="#exampleModal1">Подключиться</button>
                 </form>
+                <div id="errorMess"></div>
                 <p>Мы не передаем Ваши данные третьим лицам</p>
             </div>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -713,9 +714,9 @@
 </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-    Launch demo modal
-</button>
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">-->
+<!--    Launch demo modal-->
+<!--</button>-->
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
