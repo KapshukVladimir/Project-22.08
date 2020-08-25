@@ -103,11 +103,11 @@
     & .second-menu {
       & .menu {
         margin-bottom: 0;
-
+        padding: 0 15px 0 0;
         & .item {
-          margin-right: 38px;
+          margin-right: 40px;
           & a {
-            font-size: 12px;
+            font-size: 14px;
             color: $t-purple;
             margin-left: 9px;
             text-decoration: none;
@@ -135,7 +135,7 @@
     & .block-buttons {
       & .cabinet-btn, .connect-btn {
         padding: 13px 50px 12px 50px;
-        font-size: 14px;
+        font-size: 16px !important;
         line-height: 20px;
         color: $t-white;
         border: none;

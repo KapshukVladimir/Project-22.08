@@ -5,7 +5,21 @@
   transform: rotate(45deg);
   background: transparent;
 }
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev, .carousel-control-next  {
   top: 60px;
   right: 30px;
+}
+
+
+
+@media (min-width: 992px) {
+
+  .carousel-control-prev, .carousel-control-next {
+    top: -843px;
+    right: -47px;
+    display: contents;
+  }
+  .arrow {
+    display: none;
+  }
 }

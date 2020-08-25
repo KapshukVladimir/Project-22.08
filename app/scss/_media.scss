@@ -1,0 +1,306 @@
+@media only screen and (max-width: 1200px) {
+  .header {
+    & .navbar {
+      & .navbar-nav {
+        & .nav-item {
+          & .nav-link {
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+    & .info {
+      & .connect {
+        & h4 {
+          font-size: 14px;
+          line-height: 17px;
+        }
+        & a {
+          font-size: 14px;
+        }
+        & p {
+          font-size: 12px;
+        }
+      }
+      & .line {
+        margin: 0 10px;
+      }
+      & .country {
+        margin-left: 14px;
+
+        & a {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .index {
+    .under-header {
+
+      & .second-menu {
+        & .menu {
+          padding-right: 0;
+          & .item {
+            margin-right: 10px;
+            & a {
+              font-size: 12px;
+              margin-left: 9px;
+            }
+          }
+        }
+      }
+
+      & .block-buttons {
+        & .cabinet-btn, .connect-btn {
+          width: 100%;
+          font-size: 12px !important;
+          padding: 13px 25px 12px 25px;
+        }
+      }
+    }
+
+    .banner {
+      &-subtitle {
+        font-size: 45px;
+        line-height: 55px;
+      }
+
+      &-title {
+        font-size: 75px;
+        line-height: 91px;
+      }
+
+      & h3 {
+        font-size: 22px;
+        line-height: 27px;
+      }
+
+      &-btn {
+        & button {
+          font-size: 26px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    .tariff {
+      & .section-title {
+        & .block-title {
+          padding: 0 34px;
+          font-size: 30px;
+          line-height: 37px;
+        }
+      }
+      & .block-buttons {
+        line-height: 22px;
+      }
+
+      & .slider-custom {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        & .card {
+          margin-right: 10px;
+          position: relative;
+          z-index: 1;
+          border: none;
+          padding-top: 40px;
+          padding-bottom: 23px;
+          width: 300px;
+          &.hit::after {
+            top: -29px;
+            right: 0;
+          }
+
+
+          & .card-body-package {
+            & ul {
+              margin-top: 19px;
+              margin-bottom: 54px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              & li {
+                line-height: 20px;
+              }
+            }
+
+            & .card-connect-btn {
+              text-align: center;
+              & button {
+                padding: 17px 0 16px;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+    .how-connect {
+      & .section-title{
+        & .block-title {
+          font-size: 30px;
+          line-height: 37px;
+        }
+      }
+      & .how-title {
+        & h3{
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+      & .card-wrapper {
+        & .card {
+          &::after {
+            top: 14%;
+            right: 26%;
+            width: 109px;
+          }
+        }
+      }
+    }
+
+    //choose
+    // no need fix
+    //choose
+
+    .form-section {
+      padding-top: 48px;
+      padding-bottom: 60px;
+      & .section-title{
+        & .block-title {
+          font-size: 35px;
+          line-height: 43px;
+        }
+      }
+    }
+
+    .services {
+      padding: 51px 0 56px 0;
+      & .section-title{
+        & .block-title {
+          font-size: 35px;
+          line-height: 43px;
+        }
+      }
+    }
+
+  }
+  .footer {
+    padding: 64px 0 29px 0;
+    background-color: $bg-purple;
+    .first {
+      margin-bottom: 98px;
+      & img {
+        width: 90%;
+      }
+    }
+    & .forth {
+      p {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-expand-custom {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-custom .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: flex!important;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+  .header {
+    & .navbar {
+      & .navbar-nav {
+        & .nav-item {
+          & .nav-link {
+            font-size: 10px;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+    & .info {
+      & .connect {
+        & h4 {
+          font-size: 12px;
+          line-height: 15px;
+        }
+        & a {
+          font-size: 14px;
+          line-height: 16px;
+        }
+        & p {
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }
+      & .line {
+        margin: 0 10px;
+      }
+      & .country {
+        margin-left: 0;
+
+        & a {
+          font-size: 10px;
+          line-height: 12px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .under-header {
+    & .logo {
+      & img {
+        width: 90%;
+      }
+
+    }
+    & .second-menu {
+      & .menu {
+        padding-right: 0;
+        & .item {
+          margin-right: 10px;
+          & img {
+            width: 27px;
+            height: 25px;
+          }
+          & a {
+            font-size: 12px;
+            margin-left: 9px;
+          }
+        }
+      }
+    }
+
+    & .block-buttons {
+      & .cabinet-btn, .connect-btn {
+        width: 100%;
+        font-size: 12px !important;
+        padding: 13px 25px 12px 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+
+}
