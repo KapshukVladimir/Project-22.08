@@ -241,6 +241,7 @@
     & .navbar {
       & .navbar-nav {
         & .nav-item {
+          margin-right: 8px;
           & .nav-link {
             font-size: 10px;
             line-height: 12px;
@@ -439,6 +440,12 @@
     }
     .choose {
       background-color: #f8f8f8;
+      & .section-title {
+        & .block-title {
+          font-size: 26px;
+          line-height: 32px;
+        }
+      }
 
       .slider-custom {
         .card {
@@ -466,9 +473,101 @@
       }
 
     }
+
+    .form-section {
+      padding-top: 48px;
+      padding-bottom: 60px;
+      & .section-title{
+        & .block-title {
+          font-size: 26px;
+          line-height: 32px;
+        }
+      }
+
+      & .form-title {
+        & h3 {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+      & .form {
+
+        & button.form-size {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+    .services {
+      & .section-title{
+        & .block-title {
+          font-size: 26px;
+          line-height: 32px;
+        }
+      }
+      & .description {
+        & p {
+          font-size: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
 
+  .footer {
+    .first {
+      margin-bottom: 98px;
+      & .footer-connect, & .footer-support, & .footer-emergency, {
+        & h5 {
+          font-size: 14px;
+          line-height: 17px;
+        }
+        & a {
+          font-size: 12px;
+          line-height: 15px;
+        }
+        & p {
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }
+    }
+    .second {
+      margin-bottom: 90px;
+      & .footer-services, .footer-address, .footer-contact {
+        & h5 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        & p {
+          font-size: 10px;
+        }
+      }
+      & .footer-address{
+        & h5{
+          font-size: 10px;
+        }
+      }
+    }
+    & .third {
+      margin-bottom: 56px;
+      & .social-block {
+        & a {
+          margin-right: 6px;
+        }
+      }
+    }
+    & .forth {
+      p {
+        font-size: 8px;
+        line-height: 10px;
+      }
+    }
 
+  }
 
 
 }
@@ -506,6 +605,16 @@
     }
 
 
+  }
+  .footer {
+    & .first {
+      & .footer-logo {
+        margin-bottom: 32px;
+        & img {
+          width: 35%;
+        }
+      }
+    }
   }
 }
 
