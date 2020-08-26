@@ -604,7 +604,40 @@
       }
     }
 
+    .how-connect {
+      & .how-title {
+        & h3{
+          font-size: 13px;
+        }
+      }
+      & .card-wrapper {
+        & .card {
+          &::after {
+            background: url("../img/Arrowmy.svg") no-repeat;
+            top: 31%;
+            right: 39%;
+            width: 100%;
+          }
+          &-title {
+            margin-bottom: 20px;
+            & h3 {
+              font-size: 90px;
+              line-height: 110px;
+            }
+            & h4 {
+              font-size: 16px;
+              line-height: 20px;
+            }
 
+          }
+          &-body {
+            &-text {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
   .footer {
     & .first {
