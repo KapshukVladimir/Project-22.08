@@ -212,6 +212,12 @@
 }
 
 @media (max-width: 991.98px) {
+  .none1 {
+    display: none !important;
+  }
+  .none2 {
+    display: block !important;
+  }
   .navbar-expand-custom {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -339,15 +345,14 @@
           line-height: 32px;
         }
       }
+      & .container {
+        & .row {
+          flex-wrap: nowrap;
+        }
+      }
       & .block-buttons {
         font-size: 14px;
         line-height: 17px;
-      }
-      .none1 {
-        display: none;
-      }
-      .none2 {
-        display: block;
       }
       & .slider-custom {
         display: flex;
@@ -434,11 +439,16 @@
     }
     .choose {
       background-color: #f8f8f8;
+
       .slider-custom {
         .card {
           height: 350px;
           width: 100%;
-          margin: 0;
+          margin-right: 30px;
+          margin-left: 0;
+          &:last-child{
+            margin-right: 0;
+          }
           &-body {
             &-button {
               font-size: 16px;
