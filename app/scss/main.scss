@@ -9,7 +9,7 @@
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 1000;
   background: $purple;
   & .navbar {
     padding: 0;
@@ -488,7 +488,7 @@
     & .slick-slider1 {
       display: flex;
       justify-content: space-between;
-      & .slider-item{
+      & .slider-item1{
         & .card {
           height: 350px;
           width: 90%;
@@ -626,7 +626,7 @@
     }
     & .info-wrap {
       margin-bottom: 30px;
-      margin-top: 20px;
+      margin-top: 2px;
       & img {
         margin-right: 17px;
         margin-left: 18px;
