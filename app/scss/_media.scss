@@ -212,12 +212,6 @@
 }
 
 @media (max-width: 991.98px) {
-  .none1 {
-    display: none !important;
-  }
-  .none2 {
-    display: block !important;
-  }
   .navbar-expand-custom {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -236,6 +230,13 @@
   .navbar-expand-custom .navbar-toggler {
     display: none;
   }
+  .none1 {
+    display: none !important;
+  }
+  .none2 {
+    display: block !important;
+  }
+
 
   .header {
     & .navbar {
@@ -613,10 +614,19 @@
       & .card-wrapper {
         & .card {
           &::after {
+            background: none;
+          }
+          &:nth-child(1)::after {
             background: url("../img/Arrowmy.svg") no-repeat;
-            top: 31%;
-            right: 39%;
+            top: 34%;
+            left: 0;
             width: 100%;
+          }
+          &:nth-child(3)::after {
+            background: url("../img/arrowpoint.png") no-repeat;
+            top: 37%;
+            left: 0;
+            width: 205%;
           }
           &-title {
             margin-bottom: 20px;
@@ -635,6 +645,26 @@
               font-size: 12px;
             }
           }
+        }
+      }
+    }
+    .form-section {
+
+      & .form-title {
+        & h3 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+      & .form {
+        display: flex;
+        flex-direction: column;
+        & input {
+          margin-bottom: 32px;
+        }
+        & button.form-size {
+          font-size: 16px;
+          line-height: 20px;
         }
       }
     }
