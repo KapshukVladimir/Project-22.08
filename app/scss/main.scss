@@ -791,6 +791,54 @@
     }
   }
 }
+
+.tv {
+  .banner {
+    margin-bottom: 300px;
+    background: url("../img/bg-banner2.png") no-repeat left top;
+    background-size: cover;
+
+    & .banner-content {
+      padding-top: 125px;
+      & .banner-subtitle {
+        font-size: 150px;
+        line-height: 183px;
+        font-family: $m-bold;
+      }
+    }
+    & .sale {
+     padding-left: 30px;
+      font-size: 40px;
+      line-height: 55px;
+      font-family: $m-semi-bold;
+    }
+    & .banner-bot {
+      margin-top: 160px;
+      & .sale {
+        & span:first-child {
+          font-size: 40px;
+          text-decoration: line-through;
+          color: $t-purple;
+          font-family: $m-light;
+        }
+        & p {
+          font-size: 60px;
+          color: $t-purple;
+          font-family: $m-bold;
+        }
+      }
+      & .banner-btn {
+        & button {
+          background: $bg-purple;
+          font-size: 26px;
+          line-height: 32px;
+          padding: 27px 72px;
+        }
+      }
+    }
+
+  }
+}
 .footer {
   padding: 64px 0 29px 0;
   background-color: $bg-purple;
