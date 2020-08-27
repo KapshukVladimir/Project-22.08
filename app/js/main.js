@@ -11,18 +11,36 @@ $(function () {
     prevArrow: '<div class="slider-arrows slider-arrows__left" alt=""></div>',
     nextArrow: '<div class="slider-arrows slider-arrows__right" alt=""></div>'
   });
+  $('.slick-slider1').slick({
+    slidesToShow:3,
+    slidesToScroll:3,
+    infinite: false,
+    prevArrow: '<div class="slider-arrows slider-arrows__left--1" alt=""></div>',
+    nextArrow: '<div class="slider-arrows slider-arrows__right--1" alt=""></div>'
+  });
 
   $('.slider-arrows__left').css({'display':'none'});
+  $('.slider-arrows__left--1').css({'display':'none'});
 
   $('.slider-arrows__right').on('click', function(){
     $('.slider-arrows__right').css({'display':'none'});
     $('.slider-arrows__left').css({'display':'inline'});
     $('.slider-container').css({'margin-right':'0', 'margin-left':'auto'});
   });
+  $('.slider-arrows__right--1').on('click', function(){
+    $('.slider-arrows__right--1').css({'display':'none'});
+    $('.slider-arrows__left--1').css({'display':'inline'});
+    $('.slider-container--1').css({'margin-right':'0', 'margin-left':'auto'});
+  });
   $('.slider-arrows__left').on('click',function(){
     $('.slider-arrows__left').css({'display':'none'});
     $('.slider-arrows__right').css({'display':'inline'});
     $('.slider-container').css({'margin-right':'auto', 'margin-left':'0'});
+  });
+  $('.slider-arrows__left--1').on('click',function(){
+    $('.slider-arrows__left--1').css({'display':'none'});
+    $('.slider-arrows__right--1').css({'display':'inline'});
+    $('.slider-container--1').css({'margin-right':'auto', 'margin-left':'0'});
   });
 
   $("#sendMail").on('click', function () {

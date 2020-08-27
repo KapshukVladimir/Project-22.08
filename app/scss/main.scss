@@ -485,52 +485,54 @@
         }
       }
     }
-    .slider-custom {
+    & .slick-slider1 {
       display: flex;
       justify-content: space-between;
-      .card {
-        height: 350px;
-        width: 30%;
-        border: none;
-        margin: 0 20px;
-        background-color: transparent;
-        &-title {
-          margin-bottom: 36px;
-          & img {
-            width: 89px;
-            height: 89px;
-            object-fit: contain;
+      & .slider-item{
+        & .card {
+          height: 350px;
+          width: 90%;
+          border: none;
+          background-color: transparent;
+          &-title {
+            margin-bottom: 36px;
+            & img {
+              width: 89px;
+              height: 89px;
+              object-fit: contain;
+            }
           }
-        }
-        &-body {
-          padding: 0;
-          &-button {
-            font-family: $m-semi-bold, sans-serif;
-            width: 100%;
-            height: 75px;
-            font-size: 22px;
-            line-height: 27px;
-            letter-spacing: 0.03em;
-            padding: 11px 0;
-            background-color: $bg-orange;
-            outline: none;
-            border: none;
-            color: $t-white;
-            margin-bottom: 28px;
-          }
-          & img {
-            width: 100%;
-            margin-bottom: 21px;
-          }
-          &-text {
-            font-family: $m-light, sans-serif;
-            color: $t-purple;
-            font-size: 16px;
-            line-height: 20px;
-            letter-spacing: 0.03em;
+          &-body {
+            padding: 0;
+            &-button {
+              font-family: $m-semi-bold, sans-serif;
+              width: 100%;
+              height: 75px;
+              font-size: 22px;
+              line-height: 27px;
+              letter-spacing: 0.03em;
+              padding: 11px 0;
+              background-color: $bg-orange;
+              outline: none;
+              border: none;
+              color: $t-white;
+              margin-bottom: 28px;
+            }
+            & img {
+              width: 100%;
+              margin-bottom: 21px;
+            }
+            &-text {
+              font-family: $m-light, sans-serif;
+              color: $t-purple;
+              font-size: 16px;
+              line-height: 20px;
+              letter-spacing: 0.03em;
+            }
           }
         }
       }
+
     }
 
   }
@@ -624,6 +626,7 @@
     }
     & .info-wrap {
       margin-bottom: 30px;
+      margin-top: 20px;
       & img {
         margin-right: 17px;
         margin-left: 18px;
