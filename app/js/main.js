@@ -4,6 +4,26 @@ $(function () {
     to: 1,
     interval: 0
   });
+  $('.slick-slider').slick({
+    slidesToShow:3,
+    slidesToScroll:3,
+    infinite: false,
+    prevArrow: '<div class="slider-arrows slider-arrows__left" alt=""></div>',
+    nextArrow: '<div class="slider-arrows slider-arrows__right" alt=""></div>'
+  });
+
+  $('.slider-arrows__left').css({'display':'none'});
+
+  $('.slider-arrows__right').on('click', function(){
+    $('.slider-arrows__right').css({'display':'none'});
+    $('.slider-arrows__left').css({'display':'inline'});
+    $('.slider-container').css({'margin-right':'0', 'margin-left':'auto'});
+  });
+  $('.slider-arrows__left').on('click',function(){
+    $('.slider-arrows__left').css({'display':'none'});
+    $('.slider-arrows__right').css({'display':'inline'});
+    $('.slider-container').css({'margin-right':'auto', 'margin-left':'0'});
+  });
 
   $("#sendMail").on('click', function () {
     let name = $("#name").val().trim();
