@@ -1,25 +1,35 @@
-.carousel-control-next-icon {
+.slider-arrows {
+  position: absolute;
+  cursor: pointer;
   border-top: 1px solid $orange;
   border-right: 1px solid $orange;
   padding: 22px;
-  transform: rotate(45deg);
   background: transparent;
-}
-.carousel-control-prev, .carousel-control-next  {
-  top: 60px;
-  right: 30px;
-}
-
-
-
-@media (min-width: 992px) {
-
-  .carousel-control-prev, .carousel-control-next {
-    top: -843px;
-    right: -47px;
-    display: contents;
+  &.slider-arrows__right{
+    transform: rotate(45deg);
+    top: 52%;
+    right: -80px;
   }
-  .arrow {
-    display: none;
+  &.slider-arrows__left{
+    transform: rotate(-135deg);
+    top: 52%;
+    left: -80px;
   }
 }
+
+.slider-container{
+  margin-right: auto;
+}
+
+
+//@media (min-width: 992px) {
+//
+//  .carousel-control-prev, .carousel-control-next {
+//    top: -843px;
+//    right: -47px;
+//    display: contents;
+//  }
+//  .arrow {
+//    display: none;
+//  }
+//}
