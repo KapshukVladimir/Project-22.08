@@ -8,21 +8,21 @@
   &.slider-arrows__right{
     transform: rotate(45deg);
     top: 52%;
-    right: -80px;
+    right: -70px;
     &--1{
       transform: rotate(45deg);
       top: 52%;
-      right: -80px;
+      right: -70px;
     }
   }
   &.slider-arrows__left{
     transform: rotate(-135deg);
     top: 52%;
-    left: -80px;
+    left: -70px;
     &--1{
       transform: rotate(-135deg);
       top: 52%;
-      left: -80px;
+      left: -70px;
     }
   }
 }
