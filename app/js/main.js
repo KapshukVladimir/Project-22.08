@@ -86,6 +86,28 @@ $(function () {
     }
   });
 
+
+  /*BURGER*/
+  // $('.navbar-toggler').on('click',function () {
+  //   $('.top-menu').addClass('active');
+  // });
+  // $('.close').on('click',function () {
+  //   $('.top-menu').removeClass('active');
+  // });
+  $(window).on('click',function (event) {
+    if (event.target===$('.navbar-toggler')[0]||event.target===$('.toggler-item')[0]){
+      $('.substrate').addClass('active');
+      $('.top-menu').addClass('active');
+      $('body').css('overflow','hidden');
+    }else if(event.target===$('.substrate')[0]||event.target===$('.close')[0]||event.target===$('.close-item')[0]){
+      $('body').css('overflow','visible');
+      $('.substrate').removeClass('active');
+      $('.top-menu').removeClass('active');
+    }
+  });
+  /*BURGER*/
+
+
   $("#sendMail").on('click', function () {
     let name = $("#name").val().trim();
     let phone = $('#phone').val().trim();
