@@ -869,10 +869,11 @@
 
   }
   & .tv-block {
-    padding: 127px 1px 95px 1px;
+    padding: 127px 0 95px;
     background-image: url("../img/televisor.png");
     background-repeat: no-repeat;
-    background-position: right 4% top 20%;
+    background-size: 55%;
+    background-position: right 5% top 20%;
     background-color: #f8f8f8;
     & .list {
       margin-bottom: 62px;
@@ -925,6 +926,20 @@
       font-size: 16px;
       line-height: 20px;
       text-decoration: underline;
+    }
+  }
+  & .premium-packets {
+    & .section-title{
+      & .block-title {
+        padding: 0 34px;
+        color: $t-purple;
+        &::before {
+          background: url("../img/title-line.png");
+        }
+        &::after {
+          background: url("../img/title-line.png");
+        }
+      }
     }
   }
 }
