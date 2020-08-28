@@ -796,11 +796,15 @@
 }
 
 .tv {
-  .banner {
-    margin-bottom: 300px;
-    background: url("../img/bg-banner2.png") no-repeat left top;
+  & .banner {
+    background: url("../img/bg-banner2.png") no-repeat center;
     background-size: cover;
 
+
+    & .row:first-child {
+      margin-bottom: 160px;
+      margin-top: 60px;
+    }
     & .banner-content {
       padding-top: 125px;
       & .banner-subtitle {
@@ -810,24 +814,46 @@
       }
     }
     & .sale {
-     padding-left: 30px;
-      font-size: 40px;
-      line-height: 55px;
-      font-family: $m-semi-bold;
+      & h3 {
+        font-size: 40px;
+        line-height: 55px;
+        font-family: $m-semi-bold;
+        margin-bottom: 0;
+      }
     }
-    & .banner-bot {
-      margin-top: 160px;
-      & .sale {
-        & span:first-child {
-          font-size: 40px;
-          text-decoration: line-through;
+
+
+
+      & .block-sale {
+        & .month{
+          font-size: 30px;
           color: $t-purple;
-          font-family: $m-light;
+          font-family: $m-regular;
+          margin-right: 10px;
+          position: relative;
+          padding: 0 20px;
+          &::after {
+            position: absolute;
+            content: "";
+            background: url("../img/little-line.png") no-repeat;
+            width: 100%;
+            height: 100%;
+            top: 50%  ;
+            left: 0;
+          }
         }
-        & p {
-          font-size: 60px;
+        & div {
+          font-size: 50px;
           color: $t-purple;
           font-family: $m-bold;
+          margin-left: 20px;
+          & span {
+            font-family: $m-regular;
+            font-size: 20px;
+            margin-top: 15px;
+            margin-left: 10px;
+            text-decoration: none;
+          }
         }
       }
       & .banner-btn {
@@ -836,10 +862,70 @@
           font-size: 26px;
           line-height: 32px;
           padding: 27px 72px;
+          width: 100%;
+        }
+      }
+
+
+  }
+  & .tv-block {
+    padding: 127px 1px 95px 1px;
+    background-image: url("../img/televisor.png");
+    background-repeat: no-repeat;
+    background-position: right 4% top 20%;
+    background-color: #f8f8f8;
+    & .list {
+      margin-bottom: 62px;
+      & li {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: $m-light;
+        color: $t-purple;
+        letter-spacing: 0.03em;
+        margin-bottom: 65px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          background: url("../img/lineli.png") no-repeat;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 10px;
         }
       }
     }
-
+    & .block-price {
+      & div {
+        font-size: 75px;
+        line-height: 91px;
+        color: $t-purple;
+        font-family: $m-bold;
+        & span {
+          font-size: 30px;
+          font-family: $m-regular;
+        }
+      }
+    }
+    & .tv-btn {
+      margin-bottom: 19px;
+      & button {
+        font-size: 26px;
+        line-height: 32px;
+        font-family: $m-medium;
+        color: $t-white;
+        background-color: $bg-orange;
+        padding: 19px 69px;
+        border: none;
+        outline: none;
+      }
+    }
+    & p {
+      color: $t-purple;
+      font-size: 16px;
+      line-height: 20px;
+      text-decoration: underline;
+    }
   }
 }
 .footer {
