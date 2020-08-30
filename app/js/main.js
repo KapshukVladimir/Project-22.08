@@ -27,7 +27,20 @@ $(function () {
     slidesToScroll:3,
     infinite: false,
     prevArrow: '<div class="slider-arrows slider-arrows__left--1" alt=""></div>',
-    nextArrow: '<div class="slider-arrows slider-arrows__right--1" alt=""></div>'
+    nextArrow: '<div class="slider-arrows slider-arrows__right--1" alt=""></div>',
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed:2000,
+          arrows: false
+        }
+      },
+    ]
   });
   let counter = 0;
   // console.log($('.slider-item').length);
@@ -88,12 +101,6 @@ $(function () {
 
 
   /*BURGER*/
-  // $('.navbar-toggler').on('click',function () {
-  //   $('.top-menu').addClass('active');
-  // });
-  // $('.close').on('click',function () {
-  //   $('.top-menu').removeClass('active');
-  // });
   $(window).on('click',function (event) {
     if (event.target===$('.navbar-toggler')[0]||event.target===$('.toggler-item')[0]){
       $('.substrate').addClass('active');

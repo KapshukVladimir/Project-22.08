@@ -202,6 +202,12 @@
     }
 
   }
+  .modal-dialog {
+    max-width: 962px !important;
+  }
+  .modal-content .modal-form-block{
+    width: 71%;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -230,7 +236,17 @@
     display: block !important;
   }
 
-
+  .main {
+    padding-top: 95px;
+  }
+  .slider-arrows {
+    &.slider-arrows__right{
+      right: -10px;
+    }
+    &.slider-arrows__left{
+      left: -10px;
+    }
+  }
   .header {
     & .navbar {
       & .navbar-nav {
@@ -349,13 +365,13 @@
         font-size: 14px;
         line-height: 17px;
       }
-      & .slider-custom {
+      & .slider-item {
         display: flex;
         justify-content: space-between;
         padding: 30px 0;
 
         & .card {
-          margin-right: 10px;
+          margin: 0 auto !important;
           position: relative;
           z-index: 1;
           border: none;
@@ -563,7 +579,15 @@
 
   }
 
-
+  .modal-dialog {
+    max-width: 763px !important;
+  }
+  .modal-content .modal-form-block{
+    width: 90%;
+  }
+  .modal-content .close{
+    display: none;
+  }
 }
 
 @media (max-width: 767.98px){
@@ -628,7 +652,7 @@
     position: fixed;
   }
 
-.main{
+  .main{
   padding-top: 96px;
 }
   .index {
@@ -736,10 +760,77 @@
       }
     }
   }
+  .modal-content{
+    padding: 15px 0;
+  }
+  .modal-dialog {
+    max-width: 543px !important;
+  }
+  .modal-content .modal-form-block{
+    width: 80%;
+  }
+  .modal-content .modal-form-block .form-title{
+    font-size: 22px;
+  }
+  .modal-content .modal-form-block .form-block .form-suptitle{
+    font-size: 16px;
+  }
+  .modal-content .modal-form-block .form-block img{
+    width: 25px;
+    height: 28px;
+  }
+  .modal-content .modal-form-block .modal-form{
+    width: 100%;
+    margin: 20px 0;
+  }
 }
 
 
 
 @media (max-width: 575.89px) {
-
+  .modal-dialog {
+    max-width: 270px !important;
+  }
+  .modal-content .modal-form-block{
+    width: 85%;
+  }
+  .modal-content .modal-form-block .form-title{
+    font-size: 16px;
+  }
+  .modal-content .modal-form-block .form-block .form-suptitle{
+    font-size: 10px;
+    margin-left: 0;
+  }
+  .modal-content .modal-form-block .form-block{
+    margin: 19px -20px 0 -20px;
+  }
+  .modal-content .modal-form-block .form-block img{
+    width: 18px;
+    height: 18px;
+  }
+  .modal-content .modal-form-block .modal-form .input-wrapper {
+    flex-direction: column;
+  }
+  .modal-content .modal-form-block .modal-form .input-wrapper input {
+    width: 100%;
+    text-align: center;
+    padding: 9px 0;
+    &:first-child{
+      margin-bottom: 20px;
+    }
+  }
+  .modal-content .modal-form-block .modal-form input {
+    text-align: center;
+    padding: 9px 0;
+  }
+  .modal-content .modal-form-block .modal-form button {
+    font-size: 14px;
+  }
+  .modal-content .modal-form-block .modal-form{
+    width: 100%;
+    margin: 20px 0;
+  }
+  .form-bottom-text{
+    font-size: 8px;
+  }
 }

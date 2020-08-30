@@ -102,7 +102,7 @@
         justify-content: space-between;
         margin-bottom: 20px;
         & input {
-          width: 240px;
+          width: 47%;
           margin-bottom: 0;
         }
       }
@@ -121,10 +121,11 @@
           transition: all .2s linear;
         }
       }
-      & p {
+      & .form-bottom-text {
         color: $t-purple;
         font-size: 14px;
         font-family: $m-regular,sans-serif;
+        margin-bottom: 0;
       }
     }
   }
