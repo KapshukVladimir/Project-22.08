@@ -27,7 +27,20 @@ $(function () {
     slidesToScroll:3,
     infinite: false,
     prevArrow: '<div class="slider-arrows slider-arrows__left--1" alt=""></div>',
-    nextArrow: '<div class="slider-arrows slider-arrows__right--1" alt=""></div>'
+    nextArrow: '<div class="slider-arrows slider-arrows__right--1" alt=""></div>',
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed:2000,
+          arrows: false
+        }
+      },
+    ]
   });
   let counter = 0;
   // console.log($('.slider-item').length);
@@ -85,6 +98,22 @@ $(function () {
       $('.slick-disabled').length = 0;
     }
   });
+
+
+  /*BURGER*/
+  $(window).on('click',function (event) {
+    if (event.target===$('.navbar-toggler')[0]||event.target===$('.toggler-item')[0]){
+      $('.substrate').addClass('active');
+      $('.top-menu').addClass('active');
+      $('body').css('overflow','hidden');
+    }else if(event.target===$('.substrate')[0]||event.target===$('.close')[0]||event.target===$('.close-item')[0]){
+      $('body').css('overflow','visible');
+      $('.substrate').removeClass('active');
+      $('.top-menu').removeClass('active');
+    }
+  });
+  /*BURGER*/
+
 
   $("#sendMail").on('click', function () {
     let name = $("#name").val().trim();

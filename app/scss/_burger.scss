@@ -1,0 +1,201 @@
+.nav-block--active,
+.right-block--active{
+  display: none;
+}
+.top-menu{
+  display: none;
+  &.active{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 331px;
+    background: $bg-purple;
+    width: 100%;
+    z-index: 100;
+    padding: 34px 47px;
+  }
+  &-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-list {
+      display: flex;
+      flex-direction: column;
+      &__item{
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        & .menu__nav-link{
+          text-decoration: none;
+          padding: 0;
+          font-family: $m-medium;
+          font-size: 14px;
+          color: $t-white;
+          border-bottom: 1px solid transparent;
+          transition: all .2s linear;
+          &:hover{
+            color: $t-orange;
+            border-color:$orange;
+            transition: all .2s linear;
+          }
+          &.active{
+            color: $t-orange;
+            border-color: $orange;
+          }
+        }
+      }
+    }
+
+  }
+  &-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-list{
+      display: flex;
+      flex-direction: column;
+      &__item{
+        margin-bottom: 20px;
+        & svg {
+          margin-right: 12px;
+          width: 20px;
+          height: 20px;
+          & path {
+            fill: $white;
+          }
+          &:hover{
+            & path {
+              fill: $orange;
+            }
+          }
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        & .menu__nav-link{
+          text-decoration: none;
+          padding: 0;
+          font-family: $m-medium;
+          font-size: 14px;
+          color: $t-white;
+          border-bottom: 1px solid transparent;
+          transition: all .2s linear;
+        }
+        &:hover{
+          & svg{
+            & path {
+              fill: $orange;
+              transition: all .2s linear;
+            }
+          }
+          & .menu__nav-link{
+            color: $t-orange;
+            border-color: $orange;
+          }
+        }
+        &.active{
+          & svg{
+            & path {
+              fill: $orange;
+              transition: all .2s linear;
+            }
+          }
+          & .menu__nav-link{
+            color: $t-orange;
+            border-color: $orange;
+          }
+        }
+      }
+    }
+  }
+
+  &__btn{
+    cursor: pointer;
+    width: 205px;
+    height: 40px;
+    border: 1.3px solid transparent;
+    background-color: transparent;
+    font-size: 14px;
+    font-family: $m-medium;
+    text-align: center;
+    outline: none;
+    transition: all .2s linear;
+    &:hover,
+    &:focus{
+      outline: none;
+      transition: all .2s linear;
+    }
+    &.l-btn{
+      margin-right: 45px;
+      border-color: $white;
+      color: $t-white;
+      &:hover,
+      &:focus{
+        border-color: $orange;
+        background-color: $orange;
+      }
+    }
+    &.r-btn{
+      border-color: $orange;
+      color: $t-white;
+      background-color: $orange;
+      &:hover,
+      &:focus{
+        border-color: adjust_hue($orange,5%);
+        background-color: adjust_hue($orange,5%);
+      }
+    }
+  }
+
+  & .close{
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    z-index: 101;
+    right: 49px;
+    top: 44px;
+    &-item {
+      position: absolute;
+      width: 100%;
+      height: 1.3px;
+      background-color: #fff;
+      top: calc(50% - .65px);
+      left: 0;
+      transform: rotate(45deg);
+      z-index: 101;
+      &::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1.3px;
+        background-color: $white;
+        left: 0;
+        top: calc(50% - .65px);
+        transform: rotate(90deg);
+        z-index: 101;
+      }
+    }
+  }
+}
+
+.substrate{
+  display: none;
+  &.active{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 150;
+  }
+}
+
