@@ -930,6 +930,7 @@
     }
   }
   & .premium-packets {
+    padding-bottom: 70px;
     & .section-title{
       & .block-title {
         padding: 0 34px;
@@ -939,6 +940,70 @@
         }
         &::after {
           background: url("../img/title-line.png");
+        }
+      }
+    }
+    & .card-pack {
+      &:nth-child(2) {
+        & .card-title {
+          margin-bottom: 36px;
+        }
+      }
+      padding: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+      background-color: #fff;
+      & .card-image {
+        margin-bottom: 55px;
+        & img {
+          width: 100%;
+        }
+      }
+      & .card-title {
+        text-align: center;
+        font-size: 30px;
+        color: $t-purple;
+        line-height: 37px;
+        font-family: $m-semi-bold;
+        letter-spacing: 0.03em;
+        margin-bottom: 73px;
+      }
+      & .chanel {
+        font-size: 16px;
+        line-height: 20px;
+        color: $t-purple;
+        font-family: $m-light;
+        letter-spacing: 0.03em;
+        text-align: center;
+      }
+      & .line {
+        height: 1px;
+        background-color: $bg-purple;
+        width: 213px;
+        margin: 81px auto 62px;
+      }
+      & .premium-price {
+        text-align: center;
+        font-size: 47px;
+        line-height: 91px;
+        color: $t-purple;
+        font-family: $m-bold;
+        & span {
+          font-size: 30px;
+          font-family: $m-regular;
+        }
+      }
+      & .tv-btn {
+        margin-bottom: 19px;
+        & button {
+          font-size: 26px;
+          line-height: 32px;
+          font-family: $m-medium;
+          color: $t-white;
+          background-color: $bg-orange;
+          padding: 19px 0;
+          width: 100%;
+          border: none;
+          outline: none;
         }
       }
     }
