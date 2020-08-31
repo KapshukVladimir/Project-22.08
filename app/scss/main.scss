@@ -178,6 +178,9 @@
       text-transform: uppercase;
       margin-bottom: 37px;
     }
+    & .adaptive {
+      display: none;
+    }
     & h3 {
       font-family: $m-regular, sans-serif;
       font-size: 25px;
@@ -1707,7 +1710,7 @@
         margin-bottom: 27px;
         position: relative;
         &:last-child {
-          margin-bottom: ;
+          margin-bottom: 0;
         }
         &::before {
           position: absolute;

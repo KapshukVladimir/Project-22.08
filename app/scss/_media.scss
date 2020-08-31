@@ -1,3 +1,5 @@
+@import "vars";
+@import "fonts";
 @media (max-width: 1199.98px) {
   .header {
     & .navbar {
@@ -456,7 +458,6 @@
           line-height: 32px;
         }
       }
-
       .slider-custom {
         .card {
           height: 350px;
@@ -625,6 +626,7 @@
       }
     }
   }
+
   .header-logo{
     width: 164px;
     height: 60px;
@@ -658,32 +660,6 @@
   .index {
     .under-header {
       display: none;
-      //& .second-menu {
-      //  & div {
-      //    margin: 0;
-      //  }
-      //
-      //  & .menu {
-      //    padding-right: 0;
-      //
-      //    & .item {
-      //      margin-right: 10px;
-      //      padding: 0;
-      //
-      //      & a {
-      //        font-size: 8px;
-      //      }
-      //    }
-      //  }
-      //}
-      //
-      //& .block-buttons {
-      //  & .cabinet-btn, .connect-btn {
-      //    width: 100%;
-      //    font-size: 12px !important;
-      //    padding: 13px 25px 12px 25px;
-      //  }
-      //}
     }
 
     .how-connect {
@@ -728,6 +704,41 @@
           }
         }
       }
+    }
+    .choose {
+      background-color: #f8f8f8;
+      & .section-title {
+        & .block-title {
+          font-size: 20px;
+          line-height: 27px;
+        }
+      }
+      & .slick-slider1 {
+        display: flex;
+        justify-content: space-between;
+        & .slider-arrows__right--1 {
+          top: 50px;
+          right: -5px;
+        }
+        & .slider-item1{
+          & .card {
+            margin-right: auto !important;
+            margin-left: 0 !important;
+            &-body {
+              &-button {
+                font-size: 16px;
+                line-height: 20px;
+              }
+
+              &-text {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+
+      }
+
     }
     .form-section {
 
@@ -788,6 +799,230 @@
 
 
 @media (max-width: 575.89px) {
+  & .header {
+  & .top-menu.active {
+    flex-direction: column;
+    height: 100%;
+  }
+  & .top-menu-left {
+    margin-bottom: 10px;
+  }
+  }
+  & .index {
+    & .banner {
+      background-size: auto;
+      padding-bottom: 35px;
+      text-align: center;
+      &-subtitle {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &-title {
+        font-size: 40px;
+        line-height: 49px;
+      }
+      .adaptive {
+        display: block;
+        text-align: center;
+        color: $t-white;
+        font-size: 20px;
+        line-height: 24px;;
+        font-family: $m-regular;
+        margin: 0 auto 26px;
+      }
+      & h3 {
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 auto 31px;
+      }
+
+      &-btn {
+        & button {
+          padding-left: 0;
+          padding-right: 0;
+          width: 80%;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+    & .tariff {
+      & .section-title {
+        & .block-title {
+          font-size: 22px;
+          line-height: 27px;
+          padding: 0 10px;
+        }
+      }
+      & .block-buttons {
+        margin-bottom: 0;
+        & button{
+          font-size: 14px;
+          line-height: 17px;
+          width: 145px;
+        }
+        & button:first-child {
+          padding: 17px 0 16px;
+        }
+        & button:last-child {
+          padding: 17px 0 16px;
+          border-color: $orange;
+          color: $t-orange;
+          &:hover {
+            border: 1px solid $orange;
+            background-color: $orange;
+            color: $t-white;
+          }
+        }
+      }
+      & .slick-list {
+        margin: 0 auto;
+      }
+      & .slick-track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      & .slick-slide {
+
+      }
+      & .slider-item {
+        & .card {
+          width: 80%;
+          margin-right: 0 !important;
+          &-title {
+           margin: 30px auto;
+          }
+        }
+      }
+
+
+    }
+    & .how-connect {
+      & .how-title {
+        & h3{
+          font-size: 13px;
+        }
+      }
+      & .card-wrapper {
+        flex-direction: column;
+        & .card {
+          &::after {
+            background: none;
+          }
+          &:nth-child(1)::after {
+            background: none;
+          }
+          &:nth-child(3)::after {
+            background: none;
+          }
+          &-title {
+            margin-bottom: 20px;
+            & h3 {
+              font-size: 120px;
+              line-height: 146px;
+              text-align: center;
+            }
+            & h4 {
+              text-align: center;
+            }
+
+          }
+          &-body {
+            &-text {
+              font-size: 12px;
+              text-align: center;
+              margin: auto !important;
+            }
+          }
+        }
+      }
+    }
+
+    & .choose {
+      background-color: #f8f8f8;
+      & .section-title {
+        & .block-title {
+          font-size: 20px;
+          line-height: 27px;
+        }
+      }
+      & .slick-slider1 {
+        display: flex;
+        flex-direction: column;
+        & .slick-track {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        & .slick-slide {
+          width: 90% !important;
+          margin: 0 !important;
+        }
+        & .slider-arrows__right--1 {
+          //top: 50px;
+          //right: -5px;
+        }
+        & .slider-item1{
+          margin: 0 !important;
+          & .card {
+           margin: 0 !important;
+            &-title {
+              margin: 30px auto;
+            }
+            &-body {
+              &-button {
+                font-size: 16px;
+                line-height: 20px;
+              }
+
+              &-text {
+                font-size: 10px;
+                text-align: center;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    & .form-section {
+      & .section-title {
+        & .block-title {
+          padding: 0 10px;
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+      & .form-title {
+        & h3 {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+      & .form {
+        display: flex;
+        flex-direction: column ;
+        & .row {
+          & input {
+            margin-bottom: 32px;
+          }
+          & button.form-size {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+
+      }
+    }
+  }
+
+
   .modal-dialog {
     max-width: 270px !important;
   }

@@ -20,6 +20,22 @@ $(function () {
           nextArrow: '<div class="slider-arrows slider-arrows__right" alt=""></div>',
         }
       },
+      {
+        breakpoint: 767.89,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 575.89,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          nextArrow: false,
+          prevArrow: false,
+        }
+      }
     ]
   });
   $('.slick-slider1').slick({
@@ -40,6 +56,22 @@ $(function () {
           arrows: false
         }
       },
+      {
+        breakpoint: 767.98,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 575.89,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
     ]
   });
   let counter = 0;
